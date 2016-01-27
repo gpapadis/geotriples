@@ -10,4 +10,5 @@ RUN apt-get update && apt-get install -y \
 RUN git clone https://github.com/LinkedEOData/GeoTriples.git && \
     cd  GeoTriples/ && \
     mvn package 
-# && java -jar target/geotriples-<version>-cmd.jar [Options] [Argument]
+
+RUN echo "alias geotriples-cmd='java -jar /GeoTriples/target/geotriples*cmd.jar'" >> ~/.bashrc
